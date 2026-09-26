@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Test output
+coverage/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Logs and caches
+*.log
+.eslintcache
+*.tsbuildinfo
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Hosting providers
+.vercel/
