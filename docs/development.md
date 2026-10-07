@@ -59,7 +59,9 @@ The shared test initialization is in `src/test/setup.ts`, and Vitest configurati
 
 ## Branches and commits
 
-Create a focused branch from `main` and use Conventional Commits, for example:
+Ordinary contributors should follow the fork-based workflow in [CONTRIBUTING.md](../CONTRIBUTING.md): work on focused branches in a personal fork, based on the current upstream `main`, and submit changes back through pull requests.
+
+Use Conventional Commits, for example:
 
 ```text
 feat: add legislation search controls
@@ -79,4 +81,4 @@ A pull request should explain:
 - tests and manual checks performed
 - known limitations and deferred work
 
-Pull requests target `main`. CI must pass before review. Deployment and automatic merging are not part of the repository workflow.
+Contributor pull requests target `HNU-Falcon-Devs/csg-portal:main` from branches in personal forks. CI must pass before review, and maintainers control merging into `main`. Deployment and automatic merging are not part of the repository workflow.
