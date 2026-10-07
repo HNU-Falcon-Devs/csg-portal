@@ -3,24 +3,21 @@
 ## Prerequisites
 
 - Node.js 24
-- Corepack
+- npm, included with Node.js
 - Git
 
-Enable the package-manager shim once, then install exactly from the lockfile:
+Install exactly from the lockfile:
 
 ```bash
-corepack enable
-yarn install --immutable
+npm ci
 ```
-
-The repository pins its Yarn release through the `packageManager` field in `package.json` and uses the `node-modules` linker for broad editor and framework compatibility.
 
 ## Local development
 
 Start the development server with:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Routes are implemented under `src/app`. Shared navigation entries live in `src/data/navigation.ts`; add a route and its navigation entry together when both are intended to be public.
@@ -45,14 +42,14 @@ Do not copy official logos, seals, or branding assets into the repository.
 Run the complete local validation sequence before opening a pull request:
 
 ```bash
-yarn format:check
-yarn lint
-yarn typecheck
-yarn test
-yarn build
+npm run format:check
+npm run lint
+npm run typecheck
+npm test
+npm run build
 ```
 
-Use `yarn format` to apply formatting. Use `yarn test:coverage` when a coverage report is useful during test review; the project does not enforce an arbitrary coverage threshold.
+Use `npm run format` to apply formatting. Use `npm run test:coverage` when a coverage report is useful during test review; the project does not enforce an arbitrary coverage threshold.
 
 ## Tests
 
