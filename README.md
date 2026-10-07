@@ -110,11 +110,13 @@ The future flagship feature is the legislation portal. It may eventually present
 
 ## Development workflow
 
-1. Create a focused branch from `main`.
+Contributors use a fork-based workflow. See [Contributing](CONTRIBUTING.md) for the complete contribution process.
+
+1. Fork the repository and create a focused branch from the current `main` in your personal fork.
 2. Make the smallest coherent change and add relevant tests.
 3. Run `npm run format:check`, `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build`.
 4. Commit using the Conventional Commits format.
-5. Open a pull request describing the change, verification, and known limitations.
+5. Push to your fork and open a pull request targeting `HNU-Falcon-Devs/csg-portal:main`.
 
 Do not add institutional facts, contact details, policies, financial information, or official visual assets without an approved and verifiable source.
 
