@@ -26,12 +26,9 @@ Any future factual content must have a defined verification and ownership proces
 
 ## Search indexing
 
-Indexing is disabled in two layers:
+Indexing intent is controlled by `siteConfig.searchIndexingEnabled` in `src/lib/site-config.ts`. While the project remains unofficial and that value is `false`, root page metadata emits `noindex` and `nofollow` directives.
 
-1. Root metadata emits `noindex` and `nofollow` directives.
-2. `src/app/robots.ts` disallows crawling.
-
-Both behaviors read `searchIndexingEnabled` from `src/lib/site-config.ts`. Formal adoption would require an explicit review before changing that single configuration value, including confirmation that all published content and affiliation language are accurate.
+`src/app/robots.ts` permits crawling so crawlers can reach pages and observe those metadata directives; `robots.txt` is not used to hide or de-index pages. Formal adoption and public indexing require explicit review before enabling indexing, including confirmation that published content and affiliation language are accurate.
 
 ## Accessibility baseline
 
