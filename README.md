@@ -23,7 +23,7 @@ Search-engine indexing is disabled by default while the project remains an unoff
 - React
 - TypeScript in strict mode
 - Tailwind CSS
-- Yarn 4
+- npm
 - Vitest and React Testing Library
 - ESLint and Prettier
 - Node.js 24
@@ -33,31 +33,30 @@ Search-engine indexing is disabled by default while the project remains an unoff
 Requirements:
 
 - Node.js 24
-- Corepack, included with supported Node.js 24 installations
+- npm, included with Node.js
 
 After cloning the repository:
 
 ```bash
 cd csg-portal
-corepack enable
-yarn install --immutable
-yarn dev
+npm ci
+npm run dev
 ```
 
 Open `http://localhost:3000` in a browser.
 
 ## Available scripts
 
-| Command              | Purpose                                        |
-| -------------------- | ---------------------------------------------- |
-| `yarn dev`           | Start the local development server             |
-| `yarn build`         | Create a production build                      |
-| `yarn lint`          | Run ESLint                                     |
-| `yarn typecheck`     | Check TypeScript without emitting files        |
-| `yarn test`          | Run the test suite once                        |
-| `yarn test:coverage` | Run tests and generate a local coverage report |
-| `yarn format`        | Format supported files with Prettier           |
-| `yarn format:check`  | Verify formatting without changing files       |
+| Command                 | Purpose                                        |
+| ----------------------- | ---------------------------------------------- |
+| `npm run dev`           | Start the local development server             |
+| `npm run build`         | Create a production build                      |
+| `npm run lint`          | Run ESLint                                     |
+| `npm run typecheck`     | Check TypeScript without emitting files        |
+| `npm test`              | Run the test suite once                        |
+| `npm run test:coverage` | Run tests and generate a local coverage report |
+| `npm run format`        | Format supported files with Prettier           |
+| `npm run format:check`  | Verify formatting without changing files       |
 
 Coverage output is written to `coverage/` and is intentionally excluded from Git.
 
@@ -84,17 +83,17 @@ See [Architecture](docs/architecture.md) for design boundaries and [Development]
 The baseline suite checks homepage rendering, shared navigation, the unofficial-project disclaimer, and the keyboard skip-link contract.
 
 ```bash
-yarn test
-yarn test:coverage
+npm test
+npm run test:coverage
 ```
 
 Tests are intentionally focused on meaningful behavior rather than a target coverage percentage. Browser end-to-end testing is deferred until interactive product flows exist.
 
 ## Continuous integration
 
-GitHub Actions runs on pull requests targeting `main` and pushes to `main`. It installs the locked dependencies with Node.js 24, then checks formatting, lint rules, types, tests, and the production build. The workflow does not deploy the application.
+GitHub Actions runs on pull requests targeting `main` and pushes to `main`. It installs the locked dependencies with `npm ci` on Node.js 24, then checks formatting, lint rules, types, tests, and the production build. The workflow does not deploy the application.
 
-Dependabot checks Yarn dependencies and GitHub Actions weekly. Dependency updates are reviewed through pull requests and are not automatically merged.
+Dependabot checks npm dependencies and GitHub Actions weekly. Dependency updates are reviewed through pull requests and are not automatically merged.
 
 ## Roadmap
 
@@ -113,7 +112,7 @@ The future flagship feature is the legislation portal. It may eventually present
 
 1. Create a focused branch from `main`.
 2. Make the smallest coherent change and add relevant tests.
-3. Run `yarn format:check`, `yarn lint`, `yarn typecheck`, `yarn test`, and `yarn build`.
+3. Run `npm run format:check`, `npm run lint`, `npm run typecheck`, `npm test`, and `npm run build`.
 4. Commit using the Conventional Commits format.
 5. Open a pull request describing the change, verification, and known limitations.
 
