@@ -4,7 +4,7 @@ Thanks for contributing to the CSG Portal concept. This is an independent, unoff
 
 ## Prerequisites
 
-- Node.js 24
+- Node.js 24.15.0 or later within the Node 24 release line
 - npm
 - Git
 

@@ -5,7 +5,7 @@
   "type": "module",
   "description": "An unofficial concept for a Central Student Government digital portal.",
   "engines": {
-    "node": ">=24.0.0 <25"
+    "node": ">=24.15.0 <25"
   },
   "scripts": {
     "dev": "next dev",
