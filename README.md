@@ -26,13 +26,13 @@ Search-engine indexing is disabled by default while the project remains an unoff
 - npm
 - Vitest and React Testing Library
 - ESLint and Prettier
-- Node.js 24
+- Node.js 24.15.0 or later within the Node 24 release line
 
 ## Local setup
 
 Requirements:
 
-- Node.js 24
+- Node.js 24.15.0 or later within the Node 24 release line
 - npm, included with Node.js
 
 After cloning the repository:
@@ -91,7 +91,7 @@ Tests are intentionally focused on meaningful behavior rather than a target cove
 
 ## Continuous integration
 
-GitHub Actions runs on pull requests targeting `main` and pushes to `main`. It installs the locked dependencies with `npm ci` on Node.js 24, then checks formatting, lint rules, types, tests, and the production build. The workflow does not deploy the application.
+GitHub Actions runs on pull requests targeting `main` and pushes to `main`. It installs the locked dependencies with `npm ci` on Node.js 24.15.0 or later within the Node 24 release line, then checks formatting, lint rules, types, tests, and the production build. The workflow does not deploy the application.
 
 Dependabot checks npm dependencies and GitHub Actions weekly. Dependency updates are reviewed through pull requests and are not automatically merged.
 
